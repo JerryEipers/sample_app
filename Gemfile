@@ -6,14 +6,22 @@ ruby '1.9.3'
 gem 'rails', '4.0.8'
 
 # Use sqlite3 as the database for Active Record
-group :development do
+group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
+  gem 'guard-rspec' , '2.5.0'
+  gem 'spork-rails' , '4.0.0'
+  gem 'guard-spork' , '1.5.0'
+  gem 'childprocess' , '0.5.3' #Rails Tutorial says to use 0.3.6, but guard-rspec gem installed 0.5.3 so I kept it.
 end
 
 group :test do
 	gem 'selenium-webdriver', '2.35.1'
 	gem 'capybara', '2.1.0'
+
+  	# Uncomment these lines on Windows. THey go with 'guard-rspec' automated testing
+  	gem 'rb-notifu' , '0.0.4'
+  	gem 'wdm' , '0.1.0'	
 end
 
 # Use SCSS for stylesheets
