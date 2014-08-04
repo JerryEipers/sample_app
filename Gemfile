@@ -4,10 +4,11 @@ ruby '1.9.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.8'
+gem 'pg', '0.15.1'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-  gem 'sqlite3', '1.3.8'
+  #gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
   gem 'guard-rspec' , '2.5.0'
   gem 'spork-rails' , '4.0.0'
@@ -19,7 +20,7 @@ group :test do
 	gem 'selenium-webdriver', '2.35.1'
 	gem 'capybara', '2.1.0'
 
-  	# Uncomment these lines on Windows. THey go with 'guard-rspec' automated testing
+  	# Uncomment these lines on Windows. They go with 'guard-rspec' automated testing
   	gem 'rb-notifu' , '0.0.4'
   	gem 'wdm' , '0.1.0'	
 end
@@ -52,7 +53,7 @@ end
 
 # PostgreSQL and rails static assets gems for deploymnet to heroku
 group :production do
-	gem 'pg','0.15.1'
+	# gem 'pg','0.15.1'
 	gem 'rails_12factor', '0.0.2'
 end
 
