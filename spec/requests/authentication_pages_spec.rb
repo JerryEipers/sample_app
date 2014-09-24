@@ -20,12 +20,12 @@ describe "Authentication" do
 			let(:user) {FactoryGirl.create(:user)}
 			before do
 				fill_in "Email",		with: user.email.upcase
-				fill_in "Password",		with: user.Password
+				fill_in "Password",		with: user.password
 				click_button submit
 			end
 
 			it {should have_title(user.name)}
-			it {should have_link('Profile',			href: userpath(user))}
+			it {should have_link('Profile',			href: user_path(user))}
 			it {should have_link('Sign out',		href: signout_path)}
 			it {should_not have_link('Sign in',		href: signin_path)}	
 		end
