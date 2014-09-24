@@ -26,7 +26,9 @@ group :test do
 
   	# Uncomment these lines on Windows. They go with 'guard-rspec' automated testing
   	gem 'rb-notifu' , '0.0.4'
-  	gem 'wdm' , '0.1.0'	
+  	gem 'wdm' , '0.1.0'
+    
+  gem 'factory_girl_rails', '4.2.0'	
 end
 
 # Use SCSS for stylesheets
