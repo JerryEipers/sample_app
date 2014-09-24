@@ -14,14 +14,12 @@ describe "Authentication" do
 	describe "signin" do
 		before {visit signin_path}
 
-		let(:submit) {"Sign in"}
-
 		describe "with a valid login" do
 			let(:user) {FactoryGirl.create(:user)}
 			before do
 				fill_in "Email",		with: user.email.upcase
 				fill_in "Password",		with: user.password
-				click_button submit
+				click_button "Sign in"
 			end
 
 			it {should have_title(user.name)}
@@ -36,7 +34,7 @@ describe "Authentication" do
 		end
 
 		describe "with invalid information" do
-			before {click_button submit}
+			before {click_button "Sign in"}
 
 			it {should have_title('Sign in')}
 			it {should have_selector('div.alert.alert-error')}
