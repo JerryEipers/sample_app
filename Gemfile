@@ -65,7 +65,7 @@ end
 
 # PostgreSQL and rails static assets gems for deploymnet to heroku
 group :production do
-	# gem 'pg','0.15.1'
+	# gem 'pg','0.15.1'    #moved this to all groups above...
 	gem 'rails_12factor', '0.0.2'
 end
 
